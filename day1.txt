@@ -1,0 +1,2 @@
+select pid, sum(qty) from sales group by pid));
+
