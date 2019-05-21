@@ -1,2 +1,8 @@
 select pid, sum(qty) from sales group by pid));
 
+
+SQL> insert into bank values(
+  2  (select 'S'||'M'||lpad(nvl(max(substr(acc_no,3,3))+1,1),3,'0')
+  3  from bank where substr(acc_no,1,1)='S'), 'Jerry')
+
+
